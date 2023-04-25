@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Mugunghwa from '$lib/Mugunghwa.svelte';
-
-	export let data: any;
+	import mgh from './mgh.svg?raw';
+	$: console.log(mgh);
 </script>
 
 <div class="page-container">
@@ -62,7 +62,7 @@
 					</p>
 				</div>
 				<div class="container">
-					<Mugunghwa paths={data.paths} />
+					<Mugunghwa paths={mgh.split('\n')} />
 				</div>
 			</div>
 			<h2>about the authors</h2>
