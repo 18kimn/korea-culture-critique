@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { fade } from 'svelte/transition';
 	type Route = {
 		path: string;
 		name: string;
@@ -8,13 +9,13 @@
 	const routes: Route[] = [
 		{ path: '/', name: 'home' },
 		{ path: '/about', name: 'about' },
-		{ path: '/posts', name: 'posts' },
+		// { path: '/posts', name: 'posts' },
 		{ path: '/contact', name: 'contact' },
 		{ path: '/feed', name: 'feed' }
 	];
 </script>
 
-<div class="header">
+<div class="header" in:fade>
 	<nav>
 		{#each routes as route}
 			<a
@@ -34,10 +35,11 @@
 	}
 
 	nav {
-		width: 50%;
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-around;
+		gap: 1rem 2rem;
 	}
 
 	a {

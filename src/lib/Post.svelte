@@ -1,30 +1,23 @@
 <script lang="ts">
 	import { getFootnotes } from './footnotes';
-	import type { Footnote } from './footer';
+	import { getImages } from './images';
+	import type { Footnote } from './footnotes';
+	import type { Image } from './images';
 	import { prettyDate, adjustDate } from '$lib/utils/string';
 	import { last } from '$lib/utils/misc';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import type { Post } from './types';
 
-	interface Post {
-		date: string | Date;
-		title: string;
-		subtitle: string;
-		path: string;
-		modified?: string[];
-		tags?: string[];
-		content?: string;
-		postData: any;
-	}
-
-	let footnotes: Footnote[] = [];
-	let pairs: {
+	let rows: {
 		node: Element;
 		footnotes?: Footnote[];
+		image?: Image;
 	}[] = [];
 
 	onMount(() => {
-		footnotes = getFootnotes();
+		const footnotes = getFootnotes();
+		const images = getImages();
 		/* After Svelte does an initial (invisible) render, 
     grab that information and represent it with footnotes alongside it*/
 		const nodes = [
@@ -32,24 +25,33 @@
 				?.children as HTMLCollection)
 		];
 
-		pairs = nodes.map((node) => {
+		rows = nodes.map((node, index) => {
 			const footnoteReferences =
 				node.querySelectorAll('[id^="fn-"]');
-			if (!footnoteReferences?.length) return { node };
+			if (!footnoteReferences?.length)
+				return {
+					node,
+
+					image: images.find((image) => image.index === index)
+				};
 			const footnoteIDs = [...footnoteReferences].map(
 				(el) => `#${el.id}`
 			);
 			const containingFootnotes = footnotes.filter((footnote) =>
 				footnoteIDs.includes(footnote.href)
 			);
-			return { node, footnotes: containingFootnotes };
+			return {
+				node,
+				footnotes: containingFootnotes,
+				image: images.find((image) => image.index === index)
+			};
 		});
 	});
 
 	export let data = {} as Post;
 	let width: number;
 
-	$: ({ title, subtitle, modified, date, tags } = data);
+	$: ({ title, subtitle, modified, created } = data);
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -61,57 +63,68 @@
 					<slot />
 				</div>
 				<div class="article">
-					<div class="section-wrapper">
-						<div class="section">
-							<h1>{@html title}</h1>
-							{#if subtitle}<h2>{subtitle}</h2>{/if}
-							<div class="meta">
-								<span id="date">
-									{#if modified?.length && last(modified) !== date}
-										<em>Created:</em>
+					<div class="row">
+						<div class="section-wrapper">
+							<div class="section">
+								<h1>{@html title}</h1>
+								{#if subtitle}<h2>{subtitle}</h2>{/if}
+								<div class="meta">
+									<span id="date">
+										{#if modified?.length && last(modified) !== created}
+											<em>Created:</em>
+										{/if}
+										{prettyDate(adjustDate(created))}
+									</span>
+									{#if modified?.length && last(modified) !== created}
+										<span id="modified">
+											<em>Last modified: </em>
+											{prettyDate(adjustDate(last(modified)))}
+										</span>
 									{/if}
-									{prettyDate(adjustDate(date))}
-								</span>
-								{#if modified?.length && last(modified) !== date}
-									<span id="modified">
-										<em>Last modified: </em>
-										{prettyDate(adjustDate(last(modified)))}
-									</span>
-								{/if}
-								{#if tags?.length}
-									<span id="tags">
-										<em> Tagged with: </em>
-										<code>{tags.join(', ')}</code>
-									</span>
-								{/if}
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="spacer" />
-					{#each pairs as pair, index}
-						<div
-							class="section-wrapper"
-							in:fade={{ delay: index * 150 }}
-						>
-							<div class="section">
-								{@html pair.node.outerHTML}
-							</div>
-						</div>
-						{#if pair.footnotes && width > 1000}
+					{#each rows as row, index}
+						<div class="row">
 							<div
-								class="footnotes"
-								in:fade={{ delay: index * 150 + 150 }}
+								class="section-wrapper"
+								in:fade={{ delay: index * 150 }}
 							>
-								{#each pair.footnotes as footnote}
-									<div class="footnote">
-										{footnote.index + 1}
-										{@html footnote.html}
-									</div>
-								{/each}
+								<div class="section">
+									{@html row.node.outerHTML}
+								</div>
 							</div>
-						{:else}
-							<div class="spacer" />
-						{/if}
+							{#if width > 1000}
+								<div class="sidebar-content">
+									{#if row.footnotes}
+										<div
+											class="footnotes"
+											in:fade={{ delay: index * 150 + 150 }}
+										>
+											{#each row.footnotes as footnote}
+												<div class="footnote">
+													{footnote.index + 1}
+													{@html footnote.html}
+												</div>
+											{/each}
+										</div>
+									{/if}
+									{#if row.image}
+										<div class="image">
+											<img
+												src={row.image.url}
+												alt={row.image.caption}
+											/>
+											{row.image.caption}
+										</div>
+									{/if}
+								</div>
+							{:else}
+								<div class="spacer" />
+							{/if}
+						</div>
 					{/each}
 				</div>
 			</div>
@@ -130,11 +143,6 @@
 		display: none;
 	}
 
-	.article {
-		display: grid;
-		grid-template-columns: 3fr 1fr;
-	}
-
 	@media (max-width: 1000px) {
 		.article {
 			grid-template-columns: 1fr;
@@ -145,6 +153,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
 	}
 
 	.section {

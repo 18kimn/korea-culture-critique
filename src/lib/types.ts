@@ -10,3 +10,14 @@ export interface Shape extends Feature {
 export interface Shapes extends FeatureCollection {
 	features: Shape[];
 }
+
+export interface Post {
+	created: string | Date;
+	title: string;
+	subtitle: string;
+	path: string;
+	modified?: string[];
+	content?: string;
+	postData: any;
+	author: string;
+}

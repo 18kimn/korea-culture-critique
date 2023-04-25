@@ -1,6 +1,9 @@
 ---
-title: hello
-date: 2023-02-17
+title: Revisiting the draft
+created: 2023-05-02
+modified: 2023-05-02
+subtitle: this is a subtitle
+author: Ji-hye Rhee
 ---
 
 ## Hello
@@ -20,6 +23,8 @@ pellentesque pulvinar pellentesque habitant morbi tristique
 senectus. Sagittis aliquam malesuada bibendum arcu vitae
 elementum curabitur. Urna et pharetra pharetra massa massa
 ultricies mi quis hendrerit.
+
+![a test image](./test.jpg)
 
 Vulputate sapien nec sagittis aliquam malesuada bibendum arcu
 vitae elementum. Orci nulla pellentesque dignissim enim sit amet
@@ -62,6 +67,8 @@ condimentum mattis pellentesque. Adipiscing enim eu turpis
 egestas pretium aenean pharetra. Id cursus metus aliquam eleifend
 mi in nulla posuere sollicitudin. Porta nibh venenatis cras sed
 felis eget velit aliquet. Commodo quis imperdiet massa tincidunt.
+
+![a test image](./test.jpg)
 
 Tempus urna et pharetra pharetra massa massa ultricies mi. Purus
 in massa tempor nec feugiat nisl pretium fusce. Donec enim diam

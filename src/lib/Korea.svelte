@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import { updateProjection } from './updateProjection';
 	import type { Shape } from './types';
 	import { geoPath } from 'd3-geo';
 	import { projection } from '$lib/updateProjection';
-	import { animatePaths } from '$lib/animatePaths';
 	import type { Topology } from 'topojson-specification';
 	import { feature } from 'topojson-client';
 
@@ -33,32 +33,29 @@
 
 		const ro = new ResizeObserver(() => {
 			if (!svg) return;
-			console.log('resizing');
 			width = container.clientWidth;
 			height = container.clientHeight;
+			console.log(width, height);
 			updateProjection(width, height);
 			korea = korea.map((shape) => {
 				shape.properties.path = geoPath(projection)(shape);
 				return shape;
 			});
-			animatePaths(svg);
 		});
-
-		ro.observe(container);
+		container && ro.observe(container);
+		return () => ro.disconnect();
 	});
 </script>
 
 <div class="container" bind:this={container}>
 	<svg bind:this={svg} {width} {height}>
-		{#each korea as shape}
+		{#each korea as shape, index}
 			<path
-				style="--animation-delay: {Math.random() *
-					korea.length *
-					50}ms"
+				in:fade={{ delay: 2 * index, duration: 1000 }}
 				d={shape.properties.path}
-				stroke-width={0.6}
-				stroke="#000000"
-				fill="skyblue"
+				fill="#0085ca"
+				stroke="#0085ca"
+				stroke-width="1"
 			/>
 		{/each}
 	</svg>
@@ -74,24 +71,10 @@
 	.container {
 		position: relative;
 	}
+
 	svg {
 		position: absolute;
 		top: 0;
 		left: 0;
-	}
-
-	path {
-		opacity: 0;
-		animation: 3000ms ease-in-out var(--animation-delay) 1 normal
-			forwards running animateOpacity;
-	}
-
-	@keyframes animateOpacity {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
 	}
 </style>

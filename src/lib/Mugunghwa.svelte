@@ -6,17 +6,16 @@
 	let svg: SVGElement;
 
 	onMount(() => {
-		animatePaths(svg, true);
+		animatePaths(svg);
 	});
 </script>
 
-<div>
+<div class="mgh">
 	<svg
 		bind:this={svg}
 		width="473"
 		height="577"
 		viewBox="0 0 473 577"
-		xmlns="https://www.w3.org/2000/svg"
 	>
 		{#each paths as path, index}
 			<g style="--animation-delay: {200 * index}ms;">
@@ -27,7 +26,7 @@
 </div>
 
 <style>
-	:global(path) {
+	.mgh :global(path) {
 		stroke-dasharray: 0 1;
 		stroke-dashoffset: 0;
 		fill-opacity: 0;

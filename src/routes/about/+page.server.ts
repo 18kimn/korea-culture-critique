@@ -3,7 +3,6 @@ import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 export async function load() {
-	console.log(fs.readdirSync('.'));
 	const __dirname = dirname(fileURLToPath(import.meta.url));
 
 	const paths = fs

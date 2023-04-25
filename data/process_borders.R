@@ -12,10 +12,25 @@ process_borders <- function() {
         st_crs(shp) # handle "old-style" projection warnings
       return(shp)
     }) %>%
-    st_union() %>%
-    ms_simplify(keep = 0.04)
-
-  write_sf(dta, "data/raw/borders.json", driver = "GeoJSON", delete_dsn = TRUE)
+    ms_simplify(keep = 0.01)
+  
+  polygons <- dta |> 
+    group_by(1:n()) |> 
+    group_split() |> 
+    map_dfr(\(row){
+      tibble(geometry = st_cast(row$geometry, "POLYGON"))
+    }) |> 
+    slice_sample(prop = 1)
+  
+  write_sf(polygons, "data/raw/borders.json", driver = "GeoJSON", delete_dsn = TRUE)
+  
+  # Favicon
+  korea_plot <- ggplot(dta) + 
+    geom_sf(fill = "#0085ca", color = NA) + 
+    theme_void() 
+    
+  ggsave("static/favicon.png", plot = korea_plot, width = 192, height = 192, units = "px",
+         bg = "transparent")
 }
 
 process_borders()
