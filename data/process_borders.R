@@ -26,7 +26,7 @@ process_borders <- function() {
   
   # Favicon
   korea_plot <- ggplot(dta) + 
-    geom_sf(fill = "#0085ca", color = NA) + 
+    geom_sf(fill = "#0085ca", color = "#0085ca") + 
     theme_void() 
     
   ggsave("static/favicon.png", plot = korea_plot, width = 192, height = 192, units = "px",

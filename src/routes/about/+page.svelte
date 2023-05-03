@@ -6,24 +6,24 @@
 
 <div class="page-container">
 	<div class="page">
+		<h2>about this site</h2>
 		<div class="content">
-			<div class="row">
+			<div class="row reverse">
 				<div class="site">
-					<h2>about this site</h2>
 					<p>
 						<em>Korea, Culture, Critique</em> is a home for
 						critical reflection on contemporary Korea. Our blog
 						takes the highly visible artifacts of the
 						<em>Hallyu Wave</em>
-						as entry points into an exploration of the curents taht
-						birthed them, from the founding of South Korea through
-						Korea's unilateral division through today's crises of
-						technology and capital that continue to shape the media
-						many of us enjoy. We jam out to Aespa and ask what kind
-						of values their AI characters propagate; we marvel at
-						BTS' international success and gauge its significance
-						for the future of Korea; we laugh at
-						<em>Single's Infero</em>
+						as entry points into an exploration of the curents that
+						birthed them, from the founding of South Korea by way
+						of Korea's unilateral division to today's crises of technology
+						and capital that continue to shape the media many of us
+						enjoy. We jam out to Aespa and ask what kind of values
+						their AI characters propagate; we marvel at BTS' international
+						success and gauge its significance for the future of Korea;
+						we laugh at
+						<em>Single's Inferno</em>
 						and think about the types of bodies Korean popular culture
 						prizes above others.
 					</p>
@@ -114,7 +114,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row reverse">
 				<div class="author">
 					<em class="name" id="isabelle-rhee"
 						>Ji-hye (Isabelle) Rhee</em
@@ -192,11 +192,16 @@
 		justify-content: space-between;
 	}
 
+	.reverse {
+		flex-wrap: wrap-reverse;
+	}
+
 	h2 {
 		font-size: 3.5rem;
 	}
 
 	.row div {
+		flex: 1 1 min(50ch, 100%);
 		max-width: 70ch;
 	}
 
