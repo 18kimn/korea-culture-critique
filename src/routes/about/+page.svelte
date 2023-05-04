@@ -120,24 +120,40 @@
 						>Ji-hye (Isabelle) Rhee</em
 					>
 					is a second-generation Korean American who hails from Honolulu,
-					Hawaii by way of Seoul, Boston, the midwest, and New Haven.
-					They have an ethnic studies and human rights background
-					and are interested in carceral studies, imperialisms in
-					the Pacific, and legal history. Their previous academic
-					and creative projects have centered on the history of colonialism
-					and incarceration in Hawaii, mobile home organizing and
-					housing justice in California, and Korean diasporic identity.
-					Ji-hye’s skills and interests range from impact journalism
-					to spoken word poetry to music commentary. They are an avid
-					BTS fan and have
+					Hawaiʻi by way of Seoul, Boston, the midwest, and New Haven.
+					Ji-hye has an ethnic studies and human rights background
+					and interests in carceral studies, imperialisms in the Pacific,
+					and legal history. Their previous academic and creative
+					projects have centered on the history of colonialism and
+					incarceration in Hawaii, mobile home organizing and
+					<a
+						href="https://voiceofoc.org/2022/01/rhee-santa-anas-mobile-home-communities-deserve-rent-control/"
+						target="_blank"
+						rel="noreferrer">housing justice</a
+					>
+					in California, and
+					<a
+						href="https://aaww.org/%ed%95%b4%eb%b0%a9-liberation/"
+						target="_blank"
+						rel="noreferrer">Korean diasporic identity.</a
+					>
+
+					Ji-hye’s skills and interests range from impact
+					journalism to
+					<a
+						href="https://www.jooksongs.com/members"
+						target="_blank"
+						rel="noreferrer">spoken word poetry</a
+					>
+					to (amateur) music commentary. They are an avid BTS fan
+					and have written about
 					<a
 						href="https://ther3journal.com/issue-3/counting-grey-rhinos/"
-						rel="noreferrer"
-						target="_blank">written</a
+						target="_blank"
+						rel="noreferrer">BTS’s music,</a
 					>
-					about BTS’s music, racial melancholy, and mental health.
-					As of now, they are saving up for BTS’s comeback in 2025
-					and actively job hunting with the hopes of starting a career
+					racial melancholy, and mental health. As of now, Ji-hye
+					is actively job hunting with the hopes of starting a career
 					in client–centered public interest work.
 					<ul>
 						<li>
@@ -152,6 +168,13 @@
 						</li>
 						<li>Current obsession: playing the ukulele</li>
 					</ul>
+					<p>
+						You can read more of Ji-hye's writing <a
+							href="https://linktr.ee/jihyerhee"
+							target="_blank"
+							rel="noreferrer">here.</a
+						>
+					</p>
 				</div>
 				<div>spacer</div>
 			</div>
