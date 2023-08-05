@@ -2,6 +2,7 @@
 	"name": "korea-culture-critique",
 	"version": "0.0.1",
 	"private": true,
+	"packageManager": "pnpm@7.29.3",
 	"scripts": {
 		"run-ts": "node --loader ts-node/esm --experimental-specifier-resolution=node",
 		"borders-R": "Rscript data/process_borders.R",
