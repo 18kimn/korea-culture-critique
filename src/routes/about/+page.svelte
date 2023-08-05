@@ -28,33 +28,35 @@
 						prizes above others.
 					</p>
 					<p>
-						We take a critical approach. This doesn't mean we
-						center criticism, but instead comes from a refusal to
-						take elements and messages from media as they are.
-						All media is created along a particular set of axes
-						that privilege some and marginalize others.
-						Regardless of whether showrunners or idols intend to
-						or not, they promote specific sets of values that can
-						be found through careful and close reading. If we
-						want to move towards a better world, with values that
-						are more democratic, humane, and liberatory, then
-						there is a need to pull back the curtain on these
-						hidden values and refuse to take them for granted.
-						That insistence, and recognition, and refusal, are
-						what we call critique.
+						We take a critical approach. This doesn't just mean
+						we center criticism, and definitely not in the sense
+						that we try to find faults and flaws with cultural
+						work, but also comes from a refusal to take elements
+						and messages from media as they are. All media is
+						created along a particular set of axes that privilege
+						some and marginalize others. Regardless of whether
+						showrunners or idols intend to or not, they promote
+						specific sets of values that can be found through
+						careful and close reading. If we want to move towards
+						a better world, with values that are more democratic,
+						humane, and liberatory, then there is a need to pull
+						back the curtain on these hidden values and refuse to
+						take them for granted. That insistence, and
+						recognition, and refusal, are what we call critique.
 					</p>
 					<p>
 						The nature of this goal is intentionally expansive,
 						or even impossible in some senses of the word. This
-						blog is just one method to begin that practice, a
-						cross-section of issues we consider important and
-						close to our hearts, and we hope you'll join us in
-						thinking slowly about the state of Korean culture
-						today beyond this website. The website is currently
-						in a 6-month trial phase as we figure things out.
-						After this period, we'll recalibrate, and the site
-						may change direction -- we may open the site for
-						submissions or close the site completely.
+						blog is just one exploration of this topic and
+						perspective, beginning with a cross-section of issues
+						we consider important and close to our hearts. We
+						hope you'll join us in thinking slowly about the
+						state of Korean culture today beyond this website.
+						The website is currently in a 6-month trial phase as
+						we figure things out. After this period, we'll
+						recalibrate, and the site may change direction -- we
+						may open the site for submissions or close the site
+						completely.
 					</p>
 					<p>
 						With love, <br />
@@ -184,8 +186,32 @@
 					If you liked the content on this site, you might also
 					want to follow any of the following:
 					<ul>
-						<li>Nodutdol</li>
-						<li>that one site on BTS research</li>
+						<li>
+							<a href="https://nodutdol.org" rel="noreferrer">
+								Nodutdol,
+							</a> a principled group of diasporic Koreans organizing
+							for a unified Korea and an end to imperialism. Nodutdol
+							is based in New York with members across the United
+							States and Canada.
+						</li>
+						<li>
+							<a
+								href="https://the3rjournal.com"
+								rel="noreferrer"
+							>
+								The Rhizomatic Revolution Review,
+							</a>
+							a journal on BTS.
+						</li>
+						<li>
+							<a
+								href="https://kpopalypse.com"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Kpopalypse
+							</a>, a Kpop commentary blog.
+						</li>
 						<li><em>positions: east asia critique</em></li>
 					</ul>
 				</div>

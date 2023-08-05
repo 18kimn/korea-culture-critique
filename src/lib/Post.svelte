@@ -105,7 +105,7 @@
 										>
 											{#each row.footnotes as footnote}
 												<div class="footnote">
-													{footnote.index + 1}
+													{footnote.index + 1}.
 													{@html footnote.html}
 												</div>
 											{/each}
@@ -121,8 +121,6 @@
 										</div>
 									{/if}
 								</div>
-							{:else}
-								<div class="spacer" />
 							{/if}
 						</div>
 					{/each}
@@ -157,16 +155,25 @@
 
 	.row {
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 1fr 30%;
 	}
 
 	.section {
-		width: 68ch;
+		width: min(80ch, 80vw);
+	}
+
+	.sidebar-content {
+		min-width: 0;
+	}
+
+	.footnotes {
+		padding: 0 2rem;
 	}
 
 	.footnote {
 		font-size: 0.8rem;
-		margin: 1rem 0;
+		margin: 0.5rem 0;
+		max-width: 60ch;
 	}
 
 	.meta {
