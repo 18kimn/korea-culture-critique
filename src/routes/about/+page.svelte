@@ -208,8 +208,8 @@
 								target="_blank"
 								rel="noreferrer"
 							>
-								Kpopalypse
-							</a>, a Kpop commentary blog.
+								Kpopalypse,
+							</a> a Kpop commentary blog.
 						</li>
 						<li><em>positions: east asia critique</em></li>
 					</ul>
