@@ -74,12 +74,12 @@
 							</div>
 						</div>
 					{/each}
-				</div>
-				<div>
-					Contact:
-					<li>nathanckim18@gmail.com</li>
-					<li>@rheedacted</li>
-					<li>@nathanckim</li>
+					<div>
+						Contact:
+						<li>nathanckim18@gmail.com</li>
+						<li>@rheedacted</li>
+						<li>@nathanckim</li>
+					</div>
 				</div>
 			{/if}
 		</div>

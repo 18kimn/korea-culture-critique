@@ -1,5 +1,5 @@
 :root {
-	font-size: 14pt;
+	font-size: 12pt;
 	transition: font-size ease-in-out 200ms;
 	--font: 'Noto Sans', 'Noto Sans KR', sans-serif;
 	--border: solid 1px black;
