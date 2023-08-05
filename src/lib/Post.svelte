@@ -65,7 +65,7 @@
 				<div class="article">
 					<div class="row">
 						<div class="section-wrapper">
-							<div class="section">
+							<div class="section-content">
 								<h1>{@html title}</h1>
 								{#if subtitle}<h2>{subtitle}</h2>{/if}
 								<div class="meta">
@@ -92,7 +92,7 @@
 								class="section-wrapper"
 								in:fade={{ delay: index * 150 }}
 							>
-								<div class="section">
+								<div class="section-content">
 									{@html row.node.outerHTML}
 								</div>
 							</div>
@@ -132,8 +132,6 @@
 
 <style>
 	.content {
-		overflow-x: auto;
-		overflow-wrap: break-word;
 		padding: 2rem;
 	}
 
@@ -158,7 +156,9 @@
 		grid-template-columns: 1fr 30%;
 	}
 
-	.section {
+	.section-content {
+		overflow-x: auto;
+		overflow-wrap: anywhere;
 		width: min(80ch, 80vw);
 	}
 
@@ -168,9 +168,11 @@
 
 	.footnotes {
 		padding: 0 2rem;
+		overflow-wrap: anywhere;
 	}
 
-	.footnote {
+	.footnote,
+	:global(.footnote a) {
 		font-size: 0.8rem;
 		margin: 0.5rem 0;
 		max-width: 60ch;
@@ -191,19 +193,19 @@
 		background: none;
 	}
 
-	.content :global(.heading-link:hover) {
+	.section-content :global(.heading-link:hover) {
 		background: gray;
 	}
 
-	.content :global(h2) {
+	.section-content :global(h2) {
 		font-size: 1.5rem;
 	}
 
-	.content :global(h3) {
+	.section-content :global(h3) {
 		font-size: 1.2rem;
 	}
 
-	.content :global(a) {
+	.section-content :global(a) {
 		font-family: var(--font);
 		font-size: 1rem;
 		margin: 0rem;
@@ -212,55 +214,55 @@
 		transition: all ease-in-out 200ms;
 	}
 
-	.content :global(a:hover) {
+	.section-content :global(a:hover) {
 		color: red;
 		text-decoration: underline;
 	}
 
-	.content :global(.heading-link) {
+	.section-content :global(.heading-link) {
 		margin: 0.3rem;
 		opacity: 0;
 		transition: opacity ease-in-out 200ms;
 	}
 
-	.content :global(.heading:hover a) {
+	.section-content :global(.heading:hover a) {
 		opacity: 1;
 	}
 
-	.content :global(sup a),
-	.content :global(.backlink) {
+	.section-content :global(sup a),
+	.section-content :global(.backlink) {
 		font-size: 0.8rem;
 	}
 
-	.content :global(pre) {
+	.section-content :global(pre) {
 		font-size: 0.8rem;
 		white-space: pre-wrap;
 	}
 
-	.content :global(.caption) {
+	.section-content :global(.caption) {
 		font-size: 0.8rem;
 		display: block;
 		width: 100%;
 		text-align: center;
 	}
 
-	.content :global(img) {
+	.section-content:global(img) {
 		width: 100%;
 	}
 
-	.content :global(iframe) {
+	.section-content:global(iframe) {
 		width: 100%;
 		height: 100vh;
 	}
 
-	.content :global(blockquote) {
+	.section-content:global(blockquote) {
 		background: #ebebeb;
 		padding: 1rem;
 		margin: 0.5rem 1rem;
 		border-left: solid 5px black;
 	}
 
-	.content :global(blockquote > h1) {
+	.section-content:global(blockquote > h1) {
 		font-size: 1.3rem;
 	}
 </style>

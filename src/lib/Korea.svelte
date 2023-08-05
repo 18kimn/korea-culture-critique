@@ -35,7 +35,6 @@
 			if (!svg) return;
 			width = container.clientWidth;
 			height = container.clientHeight;
-			console.log(width, height);
 			updateProjection(width, height);
 			korea = korea.map((shape) => {
 				shape.properties.path = geoPath(projection)(shape);

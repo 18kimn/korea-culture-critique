@@ -39,7 +39,6 @@ export function stringifyTopology(
 		copied,
 		'dummy'
 	) as unknown as FeatureCollection;
-	console.log(shape.features.length);
 
 	const coords: Position[][][] = [];
 

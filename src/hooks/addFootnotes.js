@@ -1,3 +1,5 @@
+import { marked } from 'marked';
+
 /** the bulk of the action*/
 function transformer(tree, footnotes, parent, index) {
 	if (tree.type === 'linkReference') {
@@ -5,12 +7,6 @@ function transformer(tree, footnotes, parent, index) {
 		if (index === 0) {
 			return;
 		}
-		console.log({
-			id: tree.identifier,
-			refType: tree.referenceType,
-			position: tree.position,
-			prev: parent.children[index - 1]
-		});
 		// safety check -- avoid footnote-ing normal square brackets by
 		// checking for preceding carat
 		const prevNode = parent.children[index - 1];
@@ -18,7 +14,7 @@ function transformer(tree, footnotes, parent, index) {
 			prevNode.value[prevNode.value.length - 1] === '^';
 		if (!hasCarat) return;
 
-		footnotes.push(tree.label);
+		footnotes.push(marked.parseInline(tree.label));
 		const link = `<a class="footnote-link" href="#note-${footnotes.length}">${footnotes.length}</a>`;
 
 		// delete the opening carat from the previous node

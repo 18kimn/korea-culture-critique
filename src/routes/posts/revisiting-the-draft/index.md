@@ -28,7 +28,7 @@ do not acknowledge the right of conscientious objection—the
 government has sent more than 10,000 conscientious objectors to
 prison since 2000.^[Yezi Yeo, “The Good, the Bad, and the
 Forgiven: The Media Spectacle of South Korean Male Celebrities’
-Compulsory Military Service,” Media, War & Conflict 10, no. 3
+Compulsory Military Service,” _Media, War & Conflict 10, no. 3
 (2017): 295. https://www.jstor.org/stable/26392782.] Failing to
 fulfill one’s military duty is highly stigmatized and scorned
 upon by the rest of society.^[Ibid.]
@@ -39,8 +39,8 @@ debate among politicians and Korean citizens regarding who should
 be exempted from what is commonly framed as the “passport to male
 adult life in Korean society.”^[Seungsook Moon, “Trouble with
 Conscription, Entertaining Soldiers: Popular Culture and the
-Politics of Militarized Masculinity in South Korea,” Men and
-Masculinities 8, no. 1 (2005): 72.
+Politics of Militarized Masculinity in South Korea,” _Men and
+Masculinities_ 8, no. 1 (2005): 72.
 https://doi-org.eres.library.manoa.hawaii.edu/10.1177/1097184X04268800]
 As of now, South Korean law gives special exemptions to
 high-performing athletes and classical musicians and dancers if
@@ -87,8 +87,8 @@ To understand and critique the realities of universal male
 conscription in Korea, it is first necessary to examine the
 following circumstances faced by South Korea: national division,
 the Korean War, prolonged military confrontation, and fervent
-anticommunism.^[Seungsook Moon, Militarized Modernity and
-Gendered Citizenship in South Korea (Durham: Duke, 2005), 48.]
+anticommunism.^[Seungsook Moon, _Militarized Modernity and
+Gendered Citizenship in South Korea_ (Durham: Duke, 2005), 48.]
 Following 35 years of colonialism under the Japanese Empire, the
 South Korean state was established in 1948 by the U.S.
 military-backed, conservative landed class, while North Korea was
@@ -123,7 +123,7 @@ disciplinary power and pervasive force. In the case of South
 Korea, the pursuit of modernity included the anticommunist
 state’s attempt to remold its population into “useful members of
 the body politic through the combined use of discipline and
-physical violence.”^[Moon, Militarized Modernity, 51.] This
+physical violence.”^[Moon, _Militarized Modernity_, 51.] This
 “remolding” was most clearly seen through the mobilization of
 manpower through universal male military conscription, a practice
 that is also seen in the North (and to a much more intense

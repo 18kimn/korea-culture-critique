@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Mugunghwa from '$lib/Mugunghwa.svelte';
 	import mgh from './mgh.svg?raw';
-	$: console.log(mgh);
 </script>
 
 <div class="page-container">
@@ -47,8 +46,8 @@
 					<p>
 						The nature of this goal is intentionally expansive,
 						or even impossible in some senses of the word. This
-						blog is just one exploration of this topic and
-						perspective, beginning with a cross-section of issues
+						blog is just two people's exploration of this topic
+						and perspective, beginning with a handful of issues
 						we consider important and close to our hearts. We
 						hope you'll join us in thinking slowly about the
 						state of Korean culture today beyond this website.
@@ -73,8 +72,8 @@
 				<div>
 					<div class="author">
 						<em class="name" id="nathan-kim">Nathan Kim</em>
-						cares a lot about the state of this world and the people
-						in it.
+						cares about the state of this world and the people in
+						it.
 						<p>
 							He is an incoming PhD student in the School of
 							Information at the University of Michigan, where he
@@ -83,7 +82,7 @@
 							geography. He is especially interested in a
 							critical study of digital infrastructure -- those
 							apparatuses around which contemporary society
-							organizes itself, which function precisely by being
+							organizes itself, which function exactly by being
 							taken for granted.
 						</p>
 						<p>
@@ -106,7 +105,7 @@
 						<p>
 							In his free time, he enjoys playing single-player
 							video games, including <em>Persona 5 Royal</em>,
-							<em>The Legend of Zelda: Breath of the Wild</em>,
+							<em>The Legend of Zelda: Tears of the Kingdom</em>,
 							and
 							<em>Hades</em>. He's happiest with his girlfriend,
 							Anne, or when dreaming of a cat that he will get as
@@ -256,7 +255,7 @@
 
 	.container {
 		display: flex;
-		justify-items: center;
+		justify-content: center;
 	}
 
 	.site,

@@ -9,9 +9,7 @@
 	const routes: Route[] = [
 		{ path: '/', name: 'home' },
 		{ path: '/about', name: 'about' },
-		// { path: '/posts', name: 'posts' },
-		{ path: '/contact', name: 'contact' },
-		{ path: '/feed', name: 'feed' }
+		{ path: '/feed', name: 'rss' }
 	];
 </script>
 

@@ -26,12 +26,6 @@
 		);
 	}) as Post[];
 
-	/* If navigated to from another page on this site, 
-  allow for extra delay in animation since there is a fade applied
-  by the page transition
-    */
-	const delay = Boolean($navigating);
-
 	/* Can't figure out why Svelte doesn't transition it in automatically */
 	let shouldShow = false;
 	onMount(() => {
@@ -49,7 +43,7 @@
 						{#each words as word, index}
 							<span
 								in:fade={{
-									delay: index * 600 + (delay ? 600 : 0)
+									delay: !$navigating ? index * 600 : 0
 								}}>{word}</span
 							>
 						{/each}
@@ -58,7 +52,10 @@
 						by Ji-hye Rhee and Nathan Kim
 					</h2>
 				</div>
-				<div class="posts" in:fade={{ delay: 1800 }}>
+				<div
+					class="posts"
+					in:fade={{ delay: !$navigating ? 1800 : 0 }}
+				>
 					Recent content:
 					{#each posts as post}
 						<div class="post">
@@ -77,6 +74,12 @@
 							</div>
 						</div>
 					{/each}
+				</div>
+				<div>
+					Contact:
+					<li>nathanckim18@gmail.com</li>
+					<li>@rheedacted</li>
+					<li>@nathanckim</li>
 				</div>
 			{/if}
 		</div>
@@ -132,7 +135,7 @@
 
 	.post {
 		height: fit-content;
-		margin: 0.5rem 0;
+		margin: 1rem 0;
 	}
 
 	.title-bar {
@@ -144,10 +147,16 @@
 	.post-title,
 	.author {
 		font-size: 1rem;
+		margin: 0;
 	}
 
 	.author {
 		max-width: 40%;
 		text-align: right;
+	}
+
+	li {
+		display: block;
+		padding-left: 1rem;
 	}
 </style>

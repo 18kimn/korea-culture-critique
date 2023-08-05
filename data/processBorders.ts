@@ -20,7 +20,6 @@ async function processShapes() {
 			JSON.parse(text)
 		)) as FeatureCollection<Polygon>;
 	const { quantization, simplification } = compressionParams;
-	console.log(shapes.features.length);
 	const topo = topology({ dummy: shapes }, quantization);
 
 	const writeDir = resolve(__dirname, '../static');
