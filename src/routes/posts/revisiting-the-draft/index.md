@@ -20,6 +20,8 @@ their military service. With Jin’s departure, much of the world
 became aware of South Korea’s policy of universal male
 conscription for the first time.
 
+![Jin's haircut, uploaded to Weverse.](./jin.jpg)
+
 South Korea not only mandates military service of at least 18
 months for all cis, able-bodied men ages 18 to
 35,^[https://time.com/6265842/south-korea-birth-rate-military-service-exemption/]
@@ -81,6 +83,8 @@ U.S. imperialism.
 BTS is fulfilling their national duty—but is this really
 something to celebrate?
 
+![BTS and the military. Graphic from Kate Sammer at CNBC.](./bts-military.jpg)
+
 ## A brief history of militarism in Korea
 
 To understand and critique the realities of universal male
@@ -132,6 +136,8 @@ Thus, a lasting repercussion of Korea’s continued division is
 active militaries on both sides of the DMZ. Notably, the U.S.
 commander has full wartime control over South Korea’s
 military.^[https://carnegieendowment.org/2019/08/21/why-doesn-t-south-korea-have-full-control-over-its-military-pub-79702]
+
+![Photo taken by Jung Yeon-je for Getty Images.](./flags.webp)
 
 ## Problems within the military today
 
@@ -202,6 +208,8 @@ bifurcation arising from universal male conscription should
 prompt us to question the legitimacy of the military in the first
 place.
 
+![Image designed by Crystal Tai for the Wall Street Journal.](./yongsan.jpg)
+
 ## Conclusion
 
 Whose interests does universal male conscription serve, and what
@@ -238,7 +246,8 @@ from a complete overview. We direct you to the following sources
 and perspectives to learn more about the draft, its history, and
 its implications:
 
-Militarized Modernity and Gendered Citizenship in South Korea,
-Seungsook Moon The Origins of the Korean War: Liberation and the
-emergence of separate regimes, 1945-1947, Bruce Cumings The
-Unforgiven (independent film, 2005) D.P. (TV series, 2021)
+- _Militarized Modernity and Gendered Citizenship in South Korea_,
+Seungsook Moon
+- _The Origins of the Korean War: Liberation and the emergence of separate regimes, 1945-1947_, Bruce Cumings
+- _The Unforgiven_ (independent film, 2005)
+- _D.P._ (TV series, 2021)
