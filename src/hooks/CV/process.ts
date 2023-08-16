@@ -14,7 +14,7 @@ function markup(section: {name: string; entries: Entry[]}) {
       if (entry.type !== 'markdown') return entry
       return {
         type: 'markup' as const,
-        markup: marked(entry.markdown),
+        markup: marked(entry.markdown, {headerIds: false, mangle: false}),
       }
     }),
   }

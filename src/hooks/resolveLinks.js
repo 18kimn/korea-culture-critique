@@ -14,7 +14,10 @@ function transformer(tree, file) {
 	if (tree.url) {
 		tree.url = tree.url.replace('.md', '');
 	}
+	if(tree.value && tree.value.match(/bts-military/)){
+	}
 	if (['image', 'video', 'audio'].includes(tree.type)) {
+		console.log(tree)
 		const dir = basename(dirname(file.filename));
 		const originalFile = resolve(
 			dirname(file.filename),

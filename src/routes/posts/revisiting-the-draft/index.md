@@ -5,6 +5,10 @@ modified: 2023-07-15
 author: Ji-hye Rhee
 ---
 
+<script>
+import Image from '$lib/Image.svelte'
+</script>
+
 ## Introduction
 
 On a snowy day in December of last year, Jin, the oldest member
@@ -20,7 +24,8 @@ their military service. With Jin’s departure, much of the world
 became aware of South Korea’s policy of universal male
 conscription for the first time.
 
-![Jin's haircut, uploaded to Weverse.](./jin.jpg)
+<Image caption="Jin's haircut, uploaded to Weverse."
+src="/images/revisiting-the-draft/jin.jpg" />
 
 South Korea not only mandates military service of at least 18
 months for all cis, able-bodied men ages 18 to
@@ -83,7 +88,8 @@ U.S. imperialism.
 BTS is fulfilling their national duty—but is this really
 something to celebrate?
 
-![BTS and the military. Graphic from Kate Sammer at CNBC.](./bts-military.jpg)
+<Image caption="BTS and the military. Graphic from Kate Sammer at CNBC" 
+src="/images/revisiting-the-draft/bts-military.jpg"/>
 
 ## A brief history of militarism in Korea
 
@@ -137,7 +143,9 @@ active militaries on both sides of the DMZ. Notably, the U.S.
 commander has full wartime control over South Korea’s
 military.^[https://carnegieendowment.org/2019/08/21/why-doesn-t-south-korea-have-full-control-over-its-military-pub-79702]
 
-![Photo taken by Jung Yeon-je for Getty Images.](./flags.webp)
+<Image
+caption="Photo taken by Jung Yeon-je for Getty Images."
+src="/images/revisiting-the-draft/flags.webp"/>
 
 ## Problems within the military today
 
@@ -208,7 +216,9 @@ bifurcation arising from universal male conscription should
 prompt us to question the legitimacy of the military in the first
 place.
 
-![Image designed by Crystal Tai for the Wall Street Journal.](./yongsan.jpg)
+<Image
+caption="Image designed by Crystal Tai for the Wall Street Journal."
+src="/images/revisiting-the-draft/yongsan.jpg" />
 
 ## Conclusion
 
@@ -246,8 +256,9 @@ from a complete overview. We direct you to the following sources
 and perspectives to learn more about the draft, its history, and
 its implications:
 
-- _Militarized Modernity and Gendered Citizenship in South Korea_,
-Seungsook Moon
-- _The Origins of the Korean War: Liberation and the emergence of separate regimes, 1945-1947_, Bruce Cumings
+- _Militarized Modernity and Gendered Citizenship in South
+  Korea_, Seungsook Moon
+- _The Origins of the Korean War: Liberation and the emergence of
+  separate regimes, 1945-1947_, Bruce Cumings
 - _The Unforgiven_ (independent film, 2005)
 - _D.P._ (TV series, 2021)

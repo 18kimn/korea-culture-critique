@@ -14,7 +14,7 @@ function transformer(tree, footnotes, parent, index) {
 			prevNode.value[prevNode.value.length - 1] === '^';
 		if (!hasCarat) return;
 
-		footnotes.push(marked.parseInline(tree.label));
+		footnotes.push(marked.parseInline(tree.label, {headerIds: false, mangle: false}));
 		const link = `<a class="footnote-link" href="#note-${footnotes.length}">${footnotes.length}</a>`;
 
 		// delete the opening carat from the previous node

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Image from '$lib/Image.svelte';
 	import Mugunghwa from '$lib/Mugunghwa.svelte';
 	import mgh from './mgh.svg?raw';
 </script>
@@ -67,54 +68,6 @@
 				</div>
 			</div>
 			<h2>about the authors</h2>
-			<div class="row">
-				<div>spacer</div>
-				<div>
-					<div class="author">
-						<em class="name" id="nathan-kim">Nathan Kim</em>
-						cares about the state of this world and the people in
-						it.
-						<p>
-							He is an incoming PhD student in the School of
-							Information at the University of Michigan, where he
-							will work with Matt Bui and Libby Hemphill on
-							topics related to racial justice and digital
-							geography. He is especially interested in a
-							critical study of digital infrastructure -- those
-							apparatuses around which contemporary society
-							organizes itself, which function exactly by being
-							taken for granted.
-						</p>
-						<p>
-							In undergrad, he double majored in Statistics &
-							Data Science and Ethnicity, Race, & Migration. He
-							is an active developer in the Anti-Eviction Mapping
-							Project, where he is currently acting as a
-							coordinator for the <a
-								href="https://evictorbook.com"
-								><em>Evictorbook</em></a
-							>
-							project. <em>Evictorbook</em> aims to deobfuscate entangled
-							networks of property ownership in the San Francisco
-							Bay Area. He also performs data analysis for the Distributed
-							AI Research (DAIR) Institute with Dr. Alex Hanna, Director
-							of Research. At DAIR, he studies the diffusion of and
-							responses to student protest movements in the United
-							States.
-						</p>
-						<p>
-							In his free time, he enjoys playing single-player
-							video games, including <em>Persona 5 Royal</em>,
-							<em>The Legend of Zelda: Tears of the Kingdom</em>,
-							and
-							<em>Hades</em>. He's happiest with his girlfriend,
-							Anne, or when dreaming of a cat that he will get as
-							soon as he moves to his new apartment --
-							<em>very soon</em>.
-						</p>
-					</div>
-				</div>
-			</div>
 			<div class="row reverse">
 				<div class="author">
 					<em class="name" id="isabelle-rhee"
@@ -177,10 +130,64 @@
 						>
 					</p>
 				</div>
-				<div>spacer</div>
+				<div class="image-container">
+					<Image caption="Ji-hye" src="/images/about/isabelle.jpg" />
+				</div>
 			</div>
 			<div class="row">
-				<div>spacer</div>
+				<div>
+					<Image
+						caption="My deceased cat, Loba"
+						src="/images/about/loba_1.jpg"
+					/>
+				</div>
+				<div>
+					<div class="author">
+						<em class="name" id="nathan-kim">Nathan Kim</em>
+						cares about the state of this world and the people in
+						it.
+						<p>
+							He is an incoming PhD student in the School of
+							Information at the University of Michigan, where he
+							will work with Matt Bui and Libby Hemphill on
+							topics related to racial justice and digital
+							geography. He is especially interested in a
+							critical study of digital infrastructure -- those
+							apparatuses around which contemporary society
+							organizes itself, which function exactly by being
+							taken for granted.
+						</p>
+						<p>
+							In undergrad, he double majored in Statistics &
+							Data Science and Ethnicity, Race, & Migration. He
+							is an active developer in the Anti-Eviction Mapping
+							Project, where he is currently acting as a
+							coordinator for the <a
+								href="https://evictorbook.com"
+								><em>Evictorbook</em></a
+							>
+							project. <em>Evictorbook</em> aims to deobfuscate entangled
+							networks of property ownership in the San Francisco
+							Bay Area. He also performs data analysis for the Distributed
+							AI Research (DAIR) Institute with Dr. Alex Hanna, Director
+							of Research. At DAIR, he studies the diffusion of and
+							responses to student protest movements in the United
+							States.
+						</p>
+						<p>
+							In his free time, he enjoys playing single-player
+							video games, including <em>Persona 5 Royal</em>,
+							<em>The Legend of Zelda: Tears of the Kingdom</em>,
+							and
+							<em>Hades</em>. He's happiest with his girlfriend,
+							Anne, or when dreaming of a cat that he will get as
+							soon as he moves to his new apartment --
+							<em>very soon</em>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="centered-row">
 				<div class="see-also">
 					If you liked the content on this site, you might also
 					want to follow any of the following:
@@ -252,6 +259,10 @@
 		flex: 1 1 min(50ch, 100%);
 		max-width: 70ch;
 	}
+	.centered-row {
+		display: flex;
+		place-content: center;
+	}
 
 	.container {
 		display: flex;
@@ -262,5 +273,11 @@
 	.author,
 	.see-also {
 		margin: 2rem 0;
+		max-width: 70ch;
+	}
+
+	.image-container {
+		display: flex;
+		place-items: center;
 	}
 </style>
