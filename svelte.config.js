@@ -3,7 +3,6 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import resolveLinks from './src/hooks/resolveLinks.js';
 import addFootnotes from './src/hooks/addFootnotes.js';
-import makeTOC from './src/hooks/makeTOC.js';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -16,7 +15,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-			remarkPlugins: [resolveLinks, addFootnotes, makeTOC],
+			remarkPlugins: [resolveLinks, addFootnotes],
 			rehypePlugins: [
 				rehypeExternalLinks,
 				rehypeSlug,

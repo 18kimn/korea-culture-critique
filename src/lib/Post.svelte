@@ -1,38 +1,33 @@
 <script lang="ts">
 	import { getFootnotes } from './footnotes';
-	import { getImages } from './images';
 	import type { Footnote } from './footnotes';
-	import type { Image } from './images';
 	import { prettyDate, adjustDate } from '$lib/utils/string';
 	import { last } from '$lib/utils/misc';
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
 	import type { Post } from './types';
+	import makeTOC from './utils/makeTOC';
+	import TableOfContents from './TableOfContents.svelte';
 
 	let rows: {
 		node: Element;
 		footnotes?: Footnote[];
-		image?: Image;
 	}[] = [];
-
+	let nodes: Element[] = [];
 	onMount(() => {
 		const footnotes = getFootnotes();
-		const images = getImages();
 		/* After Svelte does an initial (invisible) render, 
     grab that information and represent it with footnotes alongside it*/
-		const nodes = [
+		nodes = [
 			...(document.querySelector('.article-shadow')
 				?.children as HTMLCollection)
 		];
 
-		rows = nodes.map((node, index) => {
+		rows = nodes.map((node) => {
 			const footnoteReferences =
 				node.querySelectorAll('[id^="fn-"]');
 			if (!footnoteReferences?.length)
 				return {
-					node,
-
-					image: images.find((image) => image.index === index)
+					node
 				};
 			const footnoteIDs = [...footnoteReferences].map(
 				(el) => `#${el.id}`
@@ -42,11 +37,20 @@
 			);
 			return {
 				node,
-				footnotes: containingFootnotes,
-				image: images.find((image) => image.index === index)
+				footnotes: containingFootnotes
 			};
 		});
 	});
+
+	function insertElement(
+		target: Element,
+		{ elm }: { elm: Element | Element[] }
+	) {
+		if (!Array.isArray(elm)) elm = [elm];
+		elm.forEach((el) =>
+			target.insertAdjacentElement('afterbegin', el)
+		);
+	}
 
 	export let data = {} as Post;
 	let width: number;
@@ -82,42 +86,35 @@
 										</span>
 									{/if}
 								</div>
+								<div class="table-of-contents">
+									<em>In this post:</em>
+									<TableOfContents headings={makeTOC(nodes)} />
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="spacer" />
-					{#each rows as row, index}
+					{#each rows as row}
 						<div class="row">
-							<div
-								class="section-wrapper"
-								in:fade={{ delay: index * 150 }}
-							>
+							<div class="section-wrapper">
 								<div class="section-content">
-									{@html row.node.outerHTML}
+									<div
+										use:insertElement={{
+											elm: row.node
+										}}
+									/>
 								</div>
 							</div>
 							{#if width > 1000}
 								<div class="sidebar-content">
 									{#if row.footnotes}
-										<div
-											class="footnotes"
-											in:fade={{ delay: index * 150 + 150 }}
-										>
+										<div class="footnotes">
 											{#each row.footnotes as footnote}
 												<div class="footnote">
 													{footnote.index + 1}.
 													{@html footnote.html}
 												</div>
 											{/each}
-										</div>
-									{/if}
-									{#if row.image}
-										<div class="image">
-											<img
-												src={row.image.url}
-												alt={row.image.caption}
-											/>
-											{row.image.caption}
 										</div>
 									{/if}
 								</div>

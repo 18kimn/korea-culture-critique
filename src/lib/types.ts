@@ -21,3 +21,10 @@ export interface Post {
 	postData: any;
 	author: string;
 }
+
+export interface Heading {
+	slug: string
+	level: number
+	title: string
+	children?: Heading[]
+}

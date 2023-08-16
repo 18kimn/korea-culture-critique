@@ -19,7 +19,7 @@
 						of Korea's unilateral division to today's crises of technology
 						and capital that continue to shape the media many of us
 						enjoy. We jam out to Aespa and ask what kind of values
-						their AI characters propagate; we marvel at BTS' international
+						their AI characters propagate; we marvel at BTS's international
 						success and gauge its significance for the future of Korea;
 						we laugh at
 						<em>Single's Inferno</em>

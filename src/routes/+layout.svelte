@@ -10,7 +10,7 @@
 <div>
 	<Header />
 	<div class="page-container">
-		{#key $page.route}
+		{#key $page.route.id}
 			<div class="page" in:fade={{ delay: 300 }}>
 				<slot />
 			</div>
