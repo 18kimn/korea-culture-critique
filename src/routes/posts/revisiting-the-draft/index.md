@@ -1,8 +1,12 @@
 ---
 title: Revisiting the draft
+subtitle:
+  BTS is fulfilling their national duty—but is this really
+  something to celebrate?
 created: 2023-07-15
 modified: 2023-07-15
 author: Ji-hye Rhee
+cover: /flags.webp
 ---
 
 <script>

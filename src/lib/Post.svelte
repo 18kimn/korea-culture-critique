@@ -7,6 +7,7 @@
 	import type { Post } from './types';
 	import makeTOC from './utils/makeTOC';
 	import TableOfContents from './TableOfContents.svelte';
+	import { page } from '$app/stores';
 
 	let rows: {
 		node: Element;
@@ -55,10 +56,34 @@
 	export let data = {} as Post;
 	let width: number;
 
-	$: ({ title, subtitle, modified, created } = data);
+	$: ({ title, subtitle, modified, created, author, cover } =
+		data);
+	$: displayTitle = `${title} ⋅ Korea, Culture, Critique`;
+	$: twitterUser =
+		author === 'Ji-hye Rhee' ? '@rheedacted' : '@nathanckim';
 </script>
 
 <svelte:window bind:innerWidth={width} />
+<svelte:head>
+	<title>{displayTitle}</title>
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={displayTitle} />
+	{#if subtitle}
+		<meta name="twitter:description" content={subtitle} />
+	{/if}
+	<meta name="twitter:site" content={twitterUser} />
+	{#if cover}
+		<meta
+			name="twitter:image"
+			content={$page.url.href + cover}
+		/>
+		<meta property="og:image" content={$page.url.href + cover} />
+	{/if}
+	<meta property="og:url" content={$page.url.href} />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={displayTitle} />
+	<meta property="og:description" content={subtitle} />
+</svelte:head>
 <div class="container">
 	{#if data.title}
 		<div class="content">
@@ -70,21 +95,26 @@
 					<div class="row">
 						<div class="section-wrapper">
 							<div class="section-content">
-								<h1>{@html title}</h1>
-								{#if subtitle}<h2>{subtitle}</h2>{/if}
+								<div class="title">
+									<h1>{@html title}</h1>
+									{#if subtitle}<h2>{subtitle}</h2>{/if}
+								</div>
 								<div class="meta">
-									<span id="date">
+									<div class="line">
+										<p>{author}</p>
+										<p id="date">
+											{#if modified?.length && last(modified) !== created}
+												<em>Created:</em>
+											{/if}
+											{prettyDate(adjustDate(created))}
+										</p>
 										{#if modified?.length && last(modified) !== created}
-											<em>Created:</em>
+											<span id="modified">
+												<em>Last modified: </em>
+												{prettyDate(adjustDate(last(modified)))}
+											</span>
 										{/if}
-										{prettyDate(adjustDate(created))}
-									</span>
-									{#if modified?.length && last(modified) !== created}
-										<span id="modified">
-											<em>Last modified: </em>
-											{prettyDate(adjustDate(last(modified)))}
-										</span>
-									{/if}
+									</div>
 								</div>
 								<div class="table-of-contents">
 									<em>In this post:</em>
@@ -181,9 +211,13 @@
 		align-items: flex-start;
 	}
 
+	.meta p {
+		margin: 0.5rem 0;
+	}
+
 	h1 {
 		white-space: normal;
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	h1 :global(code) {
@@ -192,6 +226,13 @@
 
 	.section-content :global(.heading-link:hover) {
 		background: gray;
+	}
+
+	.title {
+		margin: 2rem 0;
+	}
+	.title * {
+		margin: 0.5rem 0;
 	}
 
 	.section-content :global(h2) {
