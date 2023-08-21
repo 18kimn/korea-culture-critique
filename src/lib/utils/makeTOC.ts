@@ -1,10 +1,12 @@
 import type { Heading } from '$lib/types';
 
 export default function (nodes: Element[]) {
-	const headings: Heading[] = (nodes
-		.filter((node) => node.tagName.match(/^H([0-9])/)) as HTMLHeadingElement[])
+	const headings: Heading[] = (
+		nodes.filter((node) =>
+			node.tagName.match(/^H([0-9])/)
+		) as HTMLHeadingElement[]
+	)
 		.map((heading) => {
-            console.log(heading)
 			const level = Number(heading.tagName.replace('H', ''));
 			const slug =
 				'#' +
