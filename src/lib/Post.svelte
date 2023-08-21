@@ -61,6 +61,8 @@
 	$: displayTitle = `${title} ⋅ Korea, Culture, Critique`;
 	$: twitterUser =
 		author === 'Ji-hye Rhee' ? '@rheedacted' : '@nathanckim';
+	$: console.log($page);
+	$: imageURL = `${$page.url.origin}/images/${$page.params.slug}/${cover}`;
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -70,19 +72,16 @@
 	<meta name="twitter:title" content={displayTitle} />
 	{#if subtitle}
 		<meta name="twitter:description" content={subtitle} />
+		<meta property="og:description" content={subtitle} />
 	{/if}
 	<meta name="twitter:site" content={twitterUser} />
 	{#if cover}
-		<meta
-			name="twitter:image"
-			content={$page.url.href + cover}
-		/>
-		<meta property="og:image" content={$page.url.href + cover} />
+		<meta name="twitter:image" content={imageURL} />
+		<meta property="og:image" content={imageURL} />
 	{/if}
 	<meta property="og:url" content={$page.url.href} />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={displayTitle} />
-	<meta property="og:description" content={subtitle} />
 </svelte:head>
 <div class="container">
 	{#if data.title}

@@ -6,7 +6,7 @@ subtitle:
 created: 2023-07-15
 modified: 2023-07-15
 author: Ji-hye Rhee
-cover: /flags.webp
+cover: flags.webp
 ---
 
 <script>
