@@ -36,7 +36,7 @@
 
 	const displayTitle = `Korea, Culture, Critique`;
 	const subtitle =
-		'Korea, Culture, Critique is a blog for critical reflection on contemporary Korea.';
+		'A blog for critical reflection on contemporary Korea.';
 	const imageURL = '/cover.png';
 </script>
 
