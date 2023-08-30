@@ -39,7 +39,7 @@ do not acknowledge the right of conscientious objection—the
 government has sent more than 10,000 conscientious objectors to
 prison since 2000.^[Yezi Yeo, “The Good, the Bad, and the
 Forgiven: The Media Spectacle of South Korean Male Celebrities’
-Compulsory Military Service,” _Media, War & Conflict 10, no. 3
+Compulsory Military Service,” _Media, War & Conflict_ 10, no. 3
 (2017): 295. https://www.jstor.org/stable/26392782.] Failing to
 fulfill one’s military duty is highly stigmatized and scorned
 upon by the rest of society.^[Ibid.]
