@@ -187,6 +187,25 @@
 							soon as he moves to his new apartment --
 							<em>very soon</em>.
 						</p>
+						<p>
+							Despite all of its libertarian roots and
+							tendencies, he loves the old Web. Please try using <a
+								href="https://www.wired.com/story/best-rss-feed-readers/"
+								rel="noreferrer"
+								target="_blank">an RSS reader</a
+							>
+							with
+							<a href="/feed" target="_blank" rel="noreferrer"
+								>this site's RSS feed</a
+							>
+							to keep up with updates to this site. And maybe also
+							check out
+							<a
+								href="https://nathan-kim.org"
+								target="_blank"
+								rel="noreferrer">Nathan's personal website.</a
+							>
+						</p>
 					</div>
 				</div>
 			</div>
