@@ -37,7 +37,7 @@
 	const displayTitle = `Korea, Culture, Critique`;
 	const subtitle =
 		'Korea, Culture, Critique is a blog for critical reflection on contemporary Korea.';
-	const imageURL = '/favicon.png';
+	const imageURL = '/cover.png';
 </script>
 
 <svelte:head>
