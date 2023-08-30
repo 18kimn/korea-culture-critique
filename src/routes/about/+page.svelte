@@ -8,7 +8,7 @@
 <Head
 	imageURL="/cover.png"
 	title="About this blog"
-	subtitle="Korea, Culture, Critique is produced by Isabelle Rhee and Nathan Kim."
+	subtitle="Korea, Culture, Critique is produced by Ji-hye Rhee and Nathan Kim."
 />
 <div class="page-container">
 	<div class="page">
