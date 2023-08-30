@@ -4,6 +4,7 @@
 	import { fade } from 'svelte/transition';
 	import { navigating } from '$app/stores';
 	import { prettyDate, adjustDate } from '$lib/utils/string';
+	import { page } from '$app/stores';
 	import type { Post } from '$lib/types';
 
 	export let data;
@@ -13,7 +14,7 @@
 			path: `/posts/${post.path}`
 		})),
 		{
-			created: '2023-04-25',
+			created: '2023-08-25',
 			title: 'About this site',
 			subtitle: '',
 			path: '/about',
@@ -32,8 +33,30 @@
 		shouldShow = true;
 	});
 	const words = ['Korea · ', 'Culture · ', 'Critique'];
+
+	const displayTitle = `Korea, Culture, Critique`;
+	const subtitle =
+		'Korea, Culture, Critique is a blog for critical reflection on contemporary Korea.';
+	const imageURL = '/favicon.png';
 </script>
 
+<svelte:head>
+	<title>{displayTitle}</title>
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={displayTitle} />
+	{#if subtitle}
+		<meta name="twitter:description" content={subtitle} />
+		<meta property="og:description" content={subtitle} />
+	{/if}
+	<meta name="twitter:image" content={imageURL} />
+	<meta property="og:image" content={imageURL} />
+	<meta
+		property="og:url"
+		content="https://korea-culture-critique.org"
+	/>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={displayTitle} />
+</svelte:head>
 <div class="container">
 	<div class="left">
 		<div class="left-container">

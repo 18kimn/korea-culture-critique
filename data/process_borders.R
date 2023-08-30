@@ -31,6 +31,8 @@ process_borders <- function() {
     
   ggsave("static/favicon.png", plot = korea_plot, width = 192, height = 192, units = "px",
          bg = "transparent")
+  ggsave("static/cover.png", plot = korea_plot, width = 1000, height = 500, units = "px",
+         bg = "transparent")
 }
 
 process_borders()

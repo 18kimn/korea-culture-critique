@@ -61,7 +61,6 @@
 	$: displayTitle = `${title} ⋅ Korea, Culture, Critique`;
 	$: twitterUser =
 		author === 'Ji-hye Rhee' ? '@rheedacted' : '@nathanckim';
-	$: console.log($page);
 	$: imageURL = `${$page.url.origin}/images/${$page.params.slug}/${cover}`;
 </script>
 

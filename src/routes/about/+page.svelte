@@ -13,8 +13,8 @@
 					<p>
 						<em>Korea, Culture, Critique</em> is a home for
 						critical reflection on contemporary Korea. Our blog
-						takes the highly visible artifacts of the
-						<em>Hallyu Wave</em>
+						takes the highly visible artifacts of
+						<em>Hallyu</em>
 						as entry points into an exploration of the curents that
 						birthed them, from the founding of South Korea by way
 						of Korea's unilateral division to today's crises of technology
@@ -131,7 +131,10 @@
 					</p>
 				</div>
 				<div class="image-container">
-					<Image caption="Ji-hye" src="/images/about/isabelle.jpg" />
+					<Image
+						caption="Ji-hye"
+						src="/images/about/isabelle.jpg"
+					/>
 				</div>
 			</div>
 			<div class="row">
