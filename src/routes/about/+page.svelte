@@ -2,8 +2,14 @@
 	import Image from '$lib/Image.svelte';
 	import Mugunghwa from '$lib/Mugunghwa.svelte';
 	import mgh from './mgh.svg?raw';
+	import Head from '$lib/Head.svelte';
 </script>
 
+<Head
+	imageURL="/cover.png"
+	title="About this blog"
+	subtitle="Korea, Culture, Critique is produced by Isabelle Rhee and Nathan Kim."
+/>
 <div class="page-container">
 	<div class="page">
 		<h2>about this site</h2>

@@ -7,6 +7,7 @@
 	import type { Post } from './types';
 	import makeTOC from './utils/makeTOC';
 	import TableOfContents from './TableOfContents.svelte';
+	import Head from './Head.svelte';
 	import { page } from '$app/stores';
 
 	let rows: {
@@ -61,27 +62,13 @@
 	$: displayTitle = `${title} ⋅ Korea, Culture, Critique`;
 	$: twitterUser =
 		author === 'Ji-hye Rhee' ? '@rheedacted' : '@nathanckim';
-	$: imageURL = `${$page.url.origin}/images/${$page.params.slug}/${cover}`;
+	$: imageURL = cover
+		? `${$page.url.origin}/images/${$page.params.slug}/${cover}`
+		: '';
 </script>
 
 <svelte:window bind:innerWidth={width} />
-<svelte:head>
-	<title>{displayTitle}</title>
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={displayTitle} />
-	{#if subtitle}
-		<meta name="twitter:description" content={subtitle} />
-		<meta property="og:description" content={subtitle} />
-	{/if}
-	<meta name="twitter:site" content={twitterUser} />
-	{#if cover}
-		<meta name="twitter:image" content={imageURL} />
-		<meta property="og:image" content={imageURL} />
-	{/if}
-	<meta property="og:url" content={$page.url.href} />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={displayTitle} />
-</svelte:head>
+<Head title={displayTitle} {subtitle} {twitterUser} {imageURL} />
 <div class="container">
 	{#if data.title}
 		<div class="content">

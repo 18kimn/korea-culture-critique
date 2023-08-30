@@ -18,13 +18,14 @@ export interface Post {
 	path: string;
 	modified?: string[];
 	content?: string;
+	cover?: string;
 	postData: any;
 	author: string;
 }
 
 export interface Heading {
-	slug: string
-	level: number
-	title: string
-	children?: Heading[]
+	slug: string;
+	level: number;
+	title: string;
+	children?: Heading[];
 }

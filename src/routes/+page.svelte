@@ -6,6 +6,7 @@
 	import { prettyDate, adjustDate } from '$lib/utils/string';
 	import { page } from '$app/stores';
 	import type { Post } from '$lib/types';
+	import Head from '$lib/Head.svelte';
 
 	export let data;
 	const posts = [
@@ -34,29 +35,12 @@
 	});
 	const words = ['Korea · ', 'Culture · ', 'Critique'];
 
-	const displayTitle = `Korea, Culture, Critique`;
+	const title = `Korea, Culture, Critique`;
 	const subtitle =
 		'A blog for critical reflection on contemporary Korea.';
-	const imageURL = '/cover.png';
 </script>
 
-<svelte:head>
-	<title>{displayTitle}</title>
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={displayTitle} />
-	{#if subtitle}
-		<meta name="twitter:description" content={subtitle} />
-		<meta property="og:description" content={subtitle} />
-	{/if}
-	<meta name="twitter:image" content={imageURL} />
-	<meta property="og:image" content={imageURL} />
-	<meta
-		property="og:url"
-		content="https://korea-culture-critique.org"
-	/>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={displayTitle} />
-</svelte:head>
+<Head imageURL="/cover.png" {title} {subtitle} />
 <div class="container">
 	<div class="left">
 		<div class="left-container">
