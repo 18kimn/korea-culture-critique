@@ -40,7 +40,11 @@
 		'A blog for critical reflection on contemporary Korea.';
 </script>
 
-<Head imageURL="/cover.png" {title} {subtitle} />
+<Head
+	imageURL={$page.url.origin + '/cover.png'}
+	{title}
+	{subtitle}
+/>
 <div class="container">
 	<div class="left">
 		<div class="left-container">
